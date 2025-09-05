@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,6 +18,8 @@
       <!-- Slick Slider css -->
       <link rel="stylesheet" href="./assets/vendor/slick-slider/slick.css?v=1.0.0">
       
+      <link href="./assets/vendor/video/video-js.css" rel="stylesheet" />
+      
       <!-- Design System Css -->
       <link rel="stylesheet" href="./assets/css/marvel-creation.min.css?v=1.0.0" />
       
@@ -32,9 +34,10 @@
       <link rel="stylesheet" href="./assets/vendor/phosphor-icons/Fonts/duotone/style.css">
       <link rel="stylesheet" href="./assets/vendor/phosphor-icons/Fonts/fill/style.css">
       
+      <!-- Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">  </head>
+      <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">  </head>
   <body>
   <header class="header-default">
       <div class="top-header bg-primary text-white">
@@ -129,20 +132,8 @@
                               </li>
                               <li class="nav-item">
                                   <a class="nav-link "
-                                      href="./services.html">
-                                      Services
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link active"
-                                      href="./team.html">
-                                      Team
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link "
-                                      href="./contact.html">
-                                      Contact
+                                      href="./package.html">
+                                      Package
                                   </a>
                               </li>
                           </ul>
@@ -152,18 +143,12 @@
                   <div class="right-panel">
                           <div
                               class="d-flex align-items-center gap-3 flex-xl-nowrap flex-wrap px-xl-0 pb-xl-0 pt-xl-0 pt-3 px-3 pb-3">
-                              <button class="btn btn-primary p-2" onclick="window.location.reload();">Book Now</button>
+                              <a class="btn btn-primary p-2" href="./contact.html">Book Now</a>
                           </div>
                   </div>
               </div>
       </nav>
   </header>      <div class="main-content">
-<!-- Elfsight Google Reviews | Untitled Google Reviews -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="container">
-    <div class="elfsight-app-4b948d13-3975-46b7-a9f6-0852d6470513" data-elfsight-app-lazy></div>
-</div>
-
 
       </div>
   <footer>
@@ -212,26 +197,25 @@
             <h5 class="text-white mb-4">Contact Info</h5>
             <ul class="list-inline m-0 p-0 footer-link">
               <li>
-                <div class="d-flex align-items-center gap-1">
-                  <a href="mailto:Contact@marvelcreation.in?subject=Inquiry&body=Hello, I would like to know more about your services." target="_blank">
-                    <i class="ph ph-envelope"></i>Contact@marvelcreation.in</a>
+                <div>
+                  <a class="d-flex align-items-center gap-2" href="mailto:Contact@marvelcreation.in?subject=Inquiry&body=Hello, I would like to know more about your services." target="_blank">
+                    <i class="ph ph-envelope"></i><span>Contact@marvelcreation.in</span></a>
                 </div>
               </li>
               <li>
-                <div class="d-flex align-items-center gap-1">
-                  <a href="tel: +91 9408828700"><i class="ph ph-phone text-white"></i> +91 9408828700 - parth patel</a>
+                <div>
+                  <a class="d-flex align-items-center gap-2" href="tel: +91 9408828700"><i class="ph ph-phone"></i><span>+91 9408828700 - parth patel</span></a>
                 </div>
               </li>
               <li>
-                <div class="d-flex align-items-center gap-1">
-                  <a href="tel: +91 9426426550"><i class="ph ph-phone text-white"></i>
-                  +91 9426426550 - Sanjay Patel</a>
+                <div>
+                  <a class="d-flex align-items-center gap-2" href="tel: +91 9426426550"><i class="ph ph-phone"></i><span>+91 9426426550 - Sanjay Patel</span></a>
                 </div>
               </li>
               <li>
-                <div class="d-flex align-items-center gap-1">
-                  <a href="https://maps.app.goo.gl/gRncKCc9arAY29yP7" target="_blank">
-                  <i class="ph ph-map-pin"></i>Ghej Vaghaldhara Road, Ta.Chikhli, Dist.Navsari, Gujarat-396521
+                <div>
+                  <a class="d-flex align-items-center gap-2" href="https://maps.app.goo.gl/gRncKCc9arAY29yP7" target="_blank">
+                  <i class="ph ph-map-pin"></i><span>Ghej Vaghaldhara Road, Ta.Chikhli, Dist.Navsari, Gujarat-396521</span>
                   </a></div>
               </li>
             </ul>
@@ -240,9 +224,9 @@
     </div>
     <div class="row justify-content-center py-5 border-top">
       <div class="col-md-8 m-auto">
-        <h6 class="mb-0 mt-md-0 mt-3 text-secondary">Copyright ©
+        <h6 class="mb-0 mt-md-0 mt-3 ttext-heading fw-medium">Copyright ©
           <script>document.write(new Date().getFullYear())</script> Marvel Creation. All Rights Reserved. &amp; Designed &
-          Developed by <span class="text-primary">CreatixDesign.</span>
+          Developed by <span class="text-primary fw-bold text-decoration-underline">CreatixDesign.</span>
         </h6>
       </div>
     </div>
@@ -263,5 +247,7 @@
     <script src="./assets/js/plugins/fslightbox.js?v=1.0.0" defer></script>
     <!-- Slick Slider Script -->
     <script src="./assets/vendor/slick-slider/slick.min.js"></script>
+    <script src="./assets/vendor/video/video.min.js"></script>
+    <script src="./assets/vendor/videojs-youtube-master/youtube.js"></script>
     <script src="./assets/js/marvel-creation.js" defer></script>  </body>
 </html>

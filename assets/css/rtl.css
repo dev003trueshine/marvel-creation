@@ -28,23 +28,23 @@ h6 {
 }
 
 h1 {
-  font-size: var(--bs-heading-1, 4.5rem);
+  font-size: var(--bs-heading-1, 4.2062rem);
 }
 
 h2 {
-  font-size: var(--bs-heading-2, 3rem);
+  font-size: var(--bs-heading-2, 3.1563rem);
 }
 
 h3 {
-  font-size: var(--bs-heading-3, 1.25rem);
+  font-size: var(--bs-heading-3, 2.3687rem);
 }
 
 h4 {
-  font-size: var(--bs-heading-4, 1.125rem);
+  font-size: var(--bs-heading-4, 1.775rem);
 }
 
 h5 {
-  font-size: var(--bs-heading-5, 1.333rem);
+  font-size: var(--bs-heading-5, 1.125rem);
 }
 
 h6 {
@@ -82,7 +82,7 @@ img {
 }
 :root {
   --prefix: bs-;
-  --bs-heading-font-family: Inter, sans-serif, Liberation Mono, Courier New, monospace;
+  --bs-heading-font-family: var(--bs-font-monospace);
 }
 @media (max-width: 767px) {
   :root {
@@ -94,17 +94,17 @@ img {
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1400px;
 }
 
 ::-moz-selection {
   color: var(--bs-white);
-  background: var(--bs-primary);
+  background: var(--bs-secondary);
 }
 
 ::selection {
   color: var(--bs-white);
-  background: var(--bs-primary);
+  background: var(--bs-secondary);
 }
 
 [dir=rtl] {

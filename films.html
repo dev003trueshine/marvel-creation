@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   <head>
     <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,6 +18,8 @@
       <!-- Slick Slider css -->
       <link rel="stylesheet" href="./assets/vendor/slick-slider/slick.css?v=1.0.0">
       
+      <link href="./assets/vendor/video/video-js.css" rel="stylesheet" />
+      
       <!-- Design System Css -->
       <link rel="stylesheet" href="./assets/css/marvel-creation.min.css?v=1.0.0" />
       
@@ -32,9 +34,10 @@
       <link rel="stylesheet" href="./assets/vendor/phosphor-icons/Fonts/duotone/style.css">
       <link rel="stylesheet" href="./assets/vendor/phosphor-icons/Fonts/fill/style.css">
       
+      <!-- Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">  </head>
+      <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">  </head>
   <body>
   <header class="header-default">
       <div class="top-header bg-primary text-white">
@@ -129,20 +132,8 @@
                               </li>
                               <li class="nav-item">
                                   <a class="nav-link "
-                                      href="./services.html">
-                                      Services
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link "
-                                      href="./team.html">
-                                      Team
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a class="nav-link "
-                                      href="./contact.html">
-                                      Contact
+                                      href="./package.html">
+                                      Package
                                   </a>
                               </li>
                           </ul>
@@ -152,49 +143,155 @@
                   <div class="right-panel">
                           <div
                               class="d-flex align-items-center gap-3 flex-xl-nowrap flex-wrap px-xl-0 pb-xl-0 pt-xl-0 pt-3 px-3 pb-3">
-                              <button class="btn btn-primary p-2" onclick="window.location.reload();">Book Now</button>
+                              <a class="btn btn-primary p-2" href="./contact.html">Book Now</a>
                           </div>
                   </div>
               </div>
       </nav>
   </header>      <div class="main-content">
-<section class="qloud-security-banner banner-padding"
-    style="background-image: url('./assets/images/home-2.png');  background-repeat: no-repeat; background-size: cover;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-md-12">
-                <div class="banner-text text-lg-start text-center">
-                    <h2>Marvel Creation</h2>
-                    <p class="mb-5 mt-3">Capturing life's most precious moments with artistic vision and professional excellence.</p>
-                    <div class="d-flex gap-5 flex-wrap justify-content-center justify-content-lg-start align-items-center">
-                        <a href="./contact.html">Have Question? Talk With Us</a>
+<section class="section-padding ">
+    <div class="playlist-detail-page">
+        <div class="container-fluid">
+            <div class="section-title text-center">
+                <span
+                    class="decorator-title decorator-font text-primary text-uppercase text-decoration-underline">Signature
+                    Portfolio</span>
+                <h4 class="title">A glimpse of creativity captured through our lens, straight from our Portfolio.</h4>
+            </div>
+            <div class="row flex-row-reverse">
+                <div class="col-xxl-3 col-xl-4 col-lg-5">
+
+                    <div class="card border-0">
+                        <div
+                            class="card-header pb-3 mb-3 border-bottom d-flex align-items-center justify-content-between gap-1">
+                            <h5 class="m-0">Maravel Films</h5>
+                        </div>
+
+                        <div class="card-body px-0 pt-0 pb-3">
+                            <div class="playlist-data">
+                                <ul class="nav nav-pills d-flex align-items-center justify-content-center column-gap-3 row-gap-2 flex-wrap"
+                                    role="tablist">
+                                    <li class="playlist-data-card active nav-link" data-bs-toggle="pill"
+                                        href="#birthday-video">
+                                        <div class="playlist-data-card-image">
+                                            <a href="#">
+                                                <img src="./assets/images/img-2.jpeg" alt="Marriage"
+                                                    class="img-fluid object-cover w-100 border-0">
+                                            </a>
+                                        </div>
+                                        <div class="playlist-data-card-content">
+                                            <h6 class="mt-0 mb-2 line-count-2 playlist-data-title">
+                                                <a href="#">Marriage Diary</a>
+                                            </h6>
+
+                                        </div>
+                                    </li>
+                                    <li class="playlist-data-card nav-link" data-bs-toggle="pill" href="#mariage-video">
+                                        <div class="playlist-data-card-image">
+                                            <a href="#">
+                                                <img src="./assets/images/img-3.jpeg" alt="engagement"
+                                                    class="img-fluid object-cover w-100 border-0">
+                                            </a>
+                                        </div>
+                                        <div class="playlist-data-card-content">
+                                            <h6 class="mt-0 mb-2 line-count-2 playlist-data-title">
+                                                <a href="#">Engagement</a>
+                                            </h6>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-9 col-xl-8 col-lg-7 mt-lg-0 mt-4">
+                    <!-- Tab panes -->
+                    <div class="tab-content mt-5">
+                        <div id="birthday-video" class="container tab-pane active">
+                            <div class="playlist-main-banner position-relative mb-3">
+                                <div class="video-container"></div>
+                                <iframe
+                                    src="https://www.youtube.com/embed/EIbu9qQw7TM?autoplay=1&mute=1&loop=1&playlist=EIbu9qQw7TM"
+                                    title="YouTube video player" frameborder="0" height="400" width="100%"
+                                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div id="streamit_player_container"
+                                class="trending-info d-flex justify-content-between align-items-center gap-4">
+                                <a href="#">
+                                    <h4 class="my-2 fw-bold">Birthday</h4>
+                                </a>
+                                <ul class="actions-playlist list-inline my-2 p-0 d-flex gap-2 justify-content-md-end">
+                                    <li class="position-relative share-button dropend dropdown">
+                                        <button type="button" class="btn btn-link p-0 action-btn" data-bs-toggle="modal"
+                                            data-bs-target="#shareModal">
+                                            <span class="h-100 w-100 d-block" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" data-bs-title="Share">
+                                                <i class="ph ph-share-network h4 m-0"></i>
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="mariage-video" class="container tab-pane fade">
+                            <div class="playlist-main-banner position-relative mb-3">
+                                <div class="video-container"></div>
+                                <iframe
+                                    src="https://www.youtube.com/embed/EIbu9qQw7TM?autoplay=1&mute=1&loop=1&playlist=EIbu9qQw7TM"
+                                    title="YouTube video player" frameborder="0" height="400" width="100%"
+                                    allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div id="streamit_player_container"
+                                class="trending-info d-flex justify-content-between align-items-center gap-4">
+                                <a href="#">
+                                    <h4 class="my-2 fw-bold">Marriage</h4>
+                                </a>
+                                <ul class="actions-playlist list-inline my-2 p-0 d-flex gap-2 justify-content-md-end">
+                                    <li class="position-relative share-button dropend dropdown">
+                                        <button type="button" class="btn btn-link p-0 action-btn" data-bs-toggle="modal"
+                                            data-bs-target="#shareModal">
+                                            <span class="h-100 w-100 d-block" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" data-bs-title="Share">
+                                                <i class="ph ph-share-network h4 m-0"></i>
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-2 d-lg-block d-none"></div>
-            <div
-                class="col-lg-5 col-md-12 d-flex align-items-end align-items-md-center justify-content-center mt-lg-0 mt-5">
-                <div class="video-btn position-relative m-4 m-lg-0">
-                    <div class="wrapper">
-                        <div class="video-main">
-                            <div class="promo-video">
-                                <div class="waves-block">
-                                    <div class="waves-2 avatar-150 wave-1"></div>
-                                    <div class="waves-2 avatar-150 wave-2"></div>
-                                    <div class="waves-2 avatar-150 wave-3"></div>
-                                </div>
-                            </div>
-                            <a data-fslightbox="html5-video" href="https://www.youtube.com/watch?v=rLgy3eDsi-0" class="video-2 avatar-50 video-popup mfp-iframe"
-                                data-lity><i class="ph ph-play text-primary"></i></a>
-                        </div>
-                    </div>
-                    <span><a data-fslightbox="html5-video" href="https://www.youtube.com/watch?v=rLgy3eDsi-0" class="video-text fw-500 text-primary h5">Watch
-                            Video</a></span>
-                </div>
+            <div class="d-flex align-items-center justify-content-center mt-5">
+                <a href="https://www.youtube.com/c/marvelcreationin" class="btn btn-secondary">View All</a>
             </div>
         </div>
     </div>
 </section>
+<div class="section-padding">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="bg-secondary-subtle rounded p-3 p-lg-5">
+                    <h5 class="text-white mb-3 text-center">Let's Capture Your Story – Book a Session Today</h5>
+                    <p class="mb-0 text-white text-center">Ready to create beautiful memories? Don't wait – the
+                        perfect
+                        moment is now.<br> Let's schedule your photography session and bring your vision to life.
+                    </p>
+                    <div class="mt-5 d-flex align-items-center justify-content-center gap-3 flex-wrap">
+                        <a href="tel:+919408828700" class="btn btn-secondary">Call Now</a>
+                        <a href="https://wa.me/message/LEY5GTASPWF7I1" class="btn btn-primary">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
       </div>
   <footer>
     <div class="container">
@@ -242,26 +339,25 @@
             <h5 class="text-white mb-4">Contact Info</h5>
             <ul class="list-inline m-0 p-0 footer-link">
               <li>
-                <div class="d-flex align-items-center gap-1">
-                  <a href="mailto:Contact@marvelcreation.in?subject=Inquiry&body=Hello, I would like to know more about your services." target="_blank">
-                    <i class="ph ph-envelope"></i>Contact@marvelcreation.in</a>
+                <div>
+                  <a class="d-flex align-items-center gap-2" href="mailto:Contact@marvelcreation.in?subject=Inquiry&body=Hello, I would like to know more about your services." target="_blank">
+                    <i class="ph ph-envelope"></i><span>Contact@marvelcreation.in</span></a>
                 </div>
               </li>
               <li>
-                <div class="d-flex align-items-center gap-1">
-                  <a href="tel: +91 9408828700"><i class="ph ph-phone text-white"></i> +91 9408828700 - parth patel</a>
+                <div>
+                  <a class="d-flex align-items-center gap-2" href="tel: +91 9408828700"><i class="ph ph-phone"></i><span>+91 9408828700 - parth patel</span></a>
                 </div>
               </li>
               <li>
-                <div class="d-flex align-items-center gap-1">
-                  <a href="tel: +91 9426426550"><i class="ph ph-phone text-white"></i>
-                  +91 9426426550 - Sanjay Patel</a>
+                <div>
+                  <a class="d-flex align-items-center gap-2" href="tel: +91 9426426550"><i class="ph ph-phone"></i><span>+91 9426426550 - Sanjay Patel</span></a>
                 </div>
               </li>
               <li>
-                <div class="d-flex align-items-center gap-1">
-                  <a href="https://maps.app.goo.gl/gRncKCc9arAY29yP7" target="_blank">
-                  <i class="ph ph-map-pin"></i>Ghej Vaghaldhara Road, Ta.Chikhli, Dist.Navsari, Gujarat-396521
+                <div>
+                  <a class="d-flex align-items-center gap-2" href="https://maps.app.goo.gl/gRncKCc9arAY29yP7" target="_blank">
+                  <i class="ph ph-map-pin"></i><span>Ghej Vaghaldhara Road, Ta.Chikhli, Dist.Navsari, Gujarat-396521</span>
                   </a></div>
               </li>
             </ul>
@@ -270,9 +366,9 @@
     </div>
     <div class="row justify-content-center py-5 border-top">
       <div class="col-md-8 m-auto">
-        <h6 class="mb-0 mt-md-0 mt-3 text-secondary">Copyright ©
+        <h6 class="mb-0 mt-md-0 mt-3 ttext-heading fw-medium">Copyright ©
           <script>document.write(new Date().getFullYear())</script> Marvel Creation. All Rights Reserved. &amp; Designed &
-          Developed by <span class="text-primary">CreatixDesign.</span>
+          Developed by <span class="text-primary fw-bold text-decoration-underline">CreatixDesign.</span>
         </h6>
       </div>
     </div>
@@ -293,5 +389,7 @@
     <script src="./assets/js/plugins/fslightbox.js?v=1.0.0" defer></script>
     <!-- Slick Slider Script -->
     <script src="./assets/vendor/slick-slider/slick.min.js"></script>
+    <script src="./assets/vendor/video/video.min.js"></script>
+    <script src="./assets/vendor/videojs-youtube-master/youtube.js"></script>
     <script src="./assets/js/marvel-creation.js" defer></script>  </body>
 </html>
