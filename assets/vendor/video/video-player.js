@@ -1,13 +1,11 @@
 var player = videojs('videoPlayer', {
-
-    autoplay: muted,
-    controls: true,
-    poster: "images/slider/slider1.jpg",
-    loop: true,
-    plugins: {
-        hotkeys: {
-            enableModifiersForNumbers: false
-
-        }
+  autoplay: true,   // autoplay enabled
+  muted: true,      // start muted (required for autoplay in most browsers)
+  controls: true,
+  loop: true,
+  plugins: {
+    hotkeys: {
+      enableModifiersForNumbers: false
     }
+  }
 });
