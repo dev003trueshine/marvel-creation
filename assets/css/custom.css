@@ -902,6 +902,25 @@ img {
     font-size: 1em;
   }
 }
+@media (max-width: 991px) {
+  .main-slider .banner-bg {
+    padding: 3.125em 0;
+    min-height: initial;
+  }
+  .banner-bg {
+    min-height: initial;
+  }
+  .banner-bg .slider-content-full-height {
+    padding: 3.125em 0em;
+  }
+  .banner-bg .slider-content-full-height {
+    min-height: inherit;
+    height: inherit;
+  }
+  .banner-bg .banner-bg {
+    min-height: initial;
+  }
+}
 .tab-watch-trailer-container {
   padding: 0.625em;
   background: var(--bs-gray-900);

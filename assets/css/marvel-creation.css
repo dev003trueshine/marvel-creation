@@ -16793,6 +16793,12 @@ header.sticky .header-top {
     gap: 0.5rem;
   }
 }
+.navbar,
+.header-default {
+  position: relative;
+  z-index: 1070; /* Keep navbar above slick-banner */
+}
+
 /* Slide down keyframes */
 @-webkit-keyframes slideDown {
   from {

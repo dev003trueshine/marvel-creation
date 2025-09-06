@@ -1,5 +1,5 @@
 /*
- * Version: 1.0.0
+ * Version: 1.0.1
  * Template: chat bot ai
  * Author: true shine
  * Design and Developed by: true shine
@@ -9,183 +9,143 @@
 Index Of Script
 ------------------------------------------------
 :: Back To Top
+:: Portfolio Slider
+:: Generic Slick Slider
+:: Banner Slider
+:: Reviews Slider
+:: Offcanvas & Navbar Events
 ------------------------------------------------
-Index Of Script
 ----------------------------------------------*/
 
 (function () {
   "use strict";
-  
+
   jQuery(document).ready(function () {
     callPortfolioSlider();
   });
+
   /*----------------Back To Top--------------------*/
-  const backToTop = document.getElementById("back-to-top")
-  if (backToTop !== null && backToTop !== undefined) {
-    document.getElementById("back-to-top").classList.add("animate__animated", "animate__fadeOut")
-    window.addEventListener('scroll', (e) => {
+  const backToTop = document.getElementById("back-to-top");
+  if (backToTop) {
+    backToTop.classList.add("animate__animated", "animate__fadeOut");
+
+    window.addEventListener("scroll", () => {
       if (document.documentElement.scrollTop > 350) {
-        document.getElementById("back-to-top").classList.remove("animate__fadeOut")
-        document.getElementById("back-to-top").classList.add("animate__fadeIn")
+        backToTop.classList.remove("animate__fadeOut");
+        backToTop.classList.add("animate__fadeIn");
       } else {
-        document.getElementById("back-to-top").classList.remove("animate__fadeIn")
-        document.getElementById("back-to-top").classList.add("animate__fadeOut")
+        backToTop.classList.remove("animate__fadeIn");
+        backToTop.classList.add("animate__fadeOut");
       }
-    })
-    // scroll body to 0px on click
-    document.querySelector('#top').addEventListener('click', (e) => {
-      e.preventDefault()
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    })
-  }
-
- function callPortfolioSlider() {
-  if (typeof $ !== "undefined" && $.fn.slick && $(".portfolio-container").length) {
-    $(".portfolio-container").slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      centerMode: true,
-      centerPadding: "100px",
-      dots: false,
-      arrows: false,
-      responsive: [
-        {
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 3,
-            centerMode: true,
-            centerPadding: "0px"
-          },
-        },
-        {
-          breakpoint: 1023,
-          settings: {
-            slidesToShow: 3,
-            centerMode: true,
-            centerPadding: "0px"
-          },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            centerMode: true,
-            centerPadding: "0px"
-          },
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            centerMode: true,
-            centerPadding: "0px"
-          },
-        }
-      ],
     });
+
+    // scroll body to 0px on click
+    const topBtn = document.querySelector("#top");
+    if (topBtn) {
+      topBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    }
   }
- }
 
+  /*----------------Portfolio Slider--------------------*/
+  function callPortfolioSlider() {
+    if (typeof $ !== "undefined" && $.fn.slick && $(".portfolio-container").length) {
+      $(".portfolio-container").not(".slick-initialized").slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        centerPadding: "100px",
+        dots: false,
+        arrows: false,
+        responsive: [
+          { breakpoint: 1199, settings: { slidesToShow: 3, centerMode: true, centerPadding: "0px" } },
+          { breakpoint: 1023, settings: { slidesToShow: 3, centerMode: true, centerPadding: "0px" } },
+          { breakpoint: 768, settings: { slidesToShow: 1, centerMode: true, centerPadding: "0px" } },
+          { breakpoint: 480, settings: { slidesToShow: 1, centerMode: true, centerPadding: "0px" } },
+        ],
+      });
+    }
+  }
 
-
-  document.addEventListener('show.bs.offcanvas', function () {
-    document.body.classList.add('offcanvas-open');
+  /*----------------Offcanvas & Navbar--------------------*/
+  document.addEventListener("show.bs.offcanvas", function () {
+    document.body.classList.add("offcanvas-open");
   });
-  document.addEventListener('hidden.bs.offcanvas', function () {
-    document.body.classList.remove('offcanvas-open');
+  document.addEventListener("hidden.bs.offcanvas", function () {
+    document.body.classList.remove("offcanvas-open");
   });
-  document.addEventListener('shown.bs.collapse', function (e) {
-    if (e.target.classList.contains('navbar-collapse')) {
-      document.body.classList.add('navbar-expanded');
+  document.addEventListener("shown.bs.collapse", function (e) {
+    if (e.target.classList.contains("navbar-collapse")) {
+      document.body.classList.add("navbar-expanded");
     }
   });
-  document.addEventListener('hidden.bs.collapse', function (e) {
-    if (e.target.classList.contains('navbar-collapse')) {
-      document.body.classList.remove('navbar-expanded');
+  document.addEventListener("hidden.bs.collapse", function (e) {
+    if (e.target.classList.contains("navbar-collapse")) {
+      document.body.classList.remove("navbar-expanded");
     }
   });
-
-
 })();
+
+/*----------------Generic Slick Slider--------------------*/
 $(function () {
-  if ($('.slick-slider').length) {
-    $(".slick-slider").slick({
+  const $generic = $(".slick-slider");
+  if ($generic.length && !$generic.hasClass("slick-initialized")) {
+    $generic.slick({
       slidesToShow: 3,
       infinite: false,
       slidesToScroll: 1,
       autoplay: false,
-      loop: true,
       autoplaySpeed: 2000,
       dots: false,
       arrows: false,
-      responsive: [{
-          breakpoint: 1024, // tablets & small laptops
-          settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 768, // mobile landscape
-          settings: {
-            slidesToShow: 1
-          }
-        },
-        {
-          breakpoint: 480, // small mobiles
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
+      responsive: [
+        { breakpoint: 1024, settings: { slidesToShow: 2 } },
+        { breakpoint: 768, settings: { slidesToShow: 1 } },
+        { breakpoint: 480, settings: { slidesToShow: 1 } },
+      ],
     });
   }
 });
-$(document).ready(function () {
-  if ($('.slick-banner').length) {
-    $('.slick-banner').slick({
+
+/*----------------Banner Slider--------------------*/
+$(window).on("load", function () {
+  const $banner = $(".slick-banner");
+  if ($banner.length && $banner.children().length > 0 && !$banner.hasClass("slick-initialized")) {
+    $banner.slick({
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 5000,
       dots: false,
       arrows: false,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
+      adaptiveHeight: true,
     });
   }
 });
 
+/*----------------Reviews Slider--------------------*/
 $(function () {
-  $(".slick-reviews").slick({
-    slidesToShow: 3,
-    infinite: false,
-    slidesToScroll: 1,
-    autoplay: true,
-    loop: true,
-    autoplaySpeed: 2000,
-    dots: false,
-    arrows: false,
-
-    responsive: [{
-        breakpoint: 1024, // tablets & small laptops
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 768, // mobile landscape
-        settings: {
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480, // small mobiles
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  });
+  const $reviews = $(".slick-reviews");
+  if ($reviews.length && $reviews.children().length > 0 && !$reviews.hasClass("slick-initialized")) {
+    $reviews.slick({
+      slidesToShow: 3,
+      infinite: false,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: false,
+      arrows: false,
+      responsive: [
+        { breakpoint: 1024, settings: { slidesToShow: 2 } },
+        { breakpoint: 768, settings: { slidesToShow: 1 } },
+        { breakpoint: 480, settings: { slidesToShow: 1 } },
+      ],
+    });
+  }
 });
