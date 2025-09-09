@@ -450,6 +450,14 @@ img {
   padding: 5rem 0;
 }
 
+.section-padding-bottom {
+  padding-bottom: 5rem;
+}
+
+.section-padding-top {
+  padding-top: 5rem;
+}
+
 .section-bg {
   background-color: var(--bs-gray-900);
 }
@@ -498,7 +506,7 @@ img {
   z-index: 9;
 }
 .top:hover {
-  background-color: var(--bs-indigo);
+  background-color: var(--bs-secondary);
   -webkit-box-shadow: var(--bs-box-shadow);
           box-shadow: var(--bs-box-shadow);
 }
@@ -599,7 +607,13 @@ img {
 
 @media (max-width: 767.98px) {
   .section-padding {
-    padding: 1.25rem 0;
+    padding: 2rem 0;
+  }
+  .section-padding-top {
+    padding-top: 2rem;
+  }
+  .section-padding-bottom {
+    padding-bottom: 2rem;
   }
   .section-title {
     margin-bottom: 1.25rem;
@@ -664,6 +678,13 @@ img {
   opacity: 1;
 }
 
+@media (max-width: 767.98px) {
+  .masonry__container {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+}
 .specialty-item {
   overflow: hidden;
   -webkit-backface-visibility: hidden;
@@ -1043,41 +1064,41 @@ img {
     padding: 1rem;
   }
 }
-.hosting-how-it-work {
+.marvel-how-it-work {
   padding: 100px 16px 0 16px;
 }
-.hosting-how-it-work .work-inner {
+.marvel-how-it-work .work-inner {
   padding: 60px 75px 90px;
 }
 
-.hosting-work-section {
+.marvel-work-section {
   margin-top: -60px;
   padding: 0px 16px 150px 16px;
 }
-.hosting-work-section .hosting-work-contianer {
+.marvel-work-section .marvel-work-contianer {
   padding: 0 65px;
 }
-.hosting-work-section .hosting-work-contianer .hosting-work-inner .process-style-step-1 .step-content .step-number-inner {
+.marvel-work-section .marvel-work-contianer .marvel-work-inner .process-style-step-1 .step-content .step-number-inner {
   border: 10px solid var(--bs-white);
 }
-.hosting-work-section .hosting-work-contianer .hosting-work-inner .process-style-step-1 .step-content .step-number-inner .step-number {
+.marvel-work-section .marvel-work-contianer .marvel-work-inner .process-style-step-1 .step-content .step-number-inner .step-number {
   height: 90px;
   width: 90px;
   line-height: 90px;
   font-family: "Lexend Deca", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.hosting-work-section {
+.marvel-work-section {
   margin-top: -60px;
   padding: 0px 16px 150px 16px;
 }
-.hosting-work-section .hosting-work-contianer {
+.marvel-work-section .marvel-work-contianer {
   padding: 0 65px;
 }
-.hosting-work-section .hosting-work-contianer .hosting-work-inner .process-style-step-1 .step-content .step-number-inner {
+.marvel-work-section .marvel-work-contianer .marvel-work-inner .process-style-step-1 .step-content .step-number-inner {
   border: 10px solid var(--bs-white);
 }
-.hosting-work-section .hosting-work-contianer .hosting-work-inner .process-style-step-1 .step-content .step-number-inner .step-number {
+.marvel-work-section .marvel-work-contianer .marvel-work-inner .process-style-step-1 .step-content .step-number-inner .step-number {
   height: 90px;
   width: 90px;
   line-height: 90px;
@@ -1127,6 +1148,40 @@ img {
   height: 1em;
 }
 
+.about-img {
+  aspect-ratio: 2/1.6;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+  .marvel-how-it-work {
+    padding: 70px 16px 0 16px;
+  }
+  .marvel-how-it-work .work-inner {
+    padding: 60px 30px 80px 30px;
+  }
+  .marvel-work-section {
+    padding: 0px 16px 70px 16px;
+  }
+  .marvel-work-section .marvel-work-contianer {
+    padding: 0 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .marvel-how-it-work {
+    padding: 50px 16px 0 16px;
+  }
+  .marvel-how-it-work .work-inner {
+    padding: 30px;
+  }
+  .marvel-work-section {
+    padding: 0px 16px 50px 16px;
+  }
+  .marvel-work-section .marvel-work-contianer {
+    padding: 0;
+  }
+}
 @media (max-width: 1600px) {
   .container-fluid {
     padding: 0 3.5rem;
