@@ -1,4 +1,4 @@
-var player = videojs('videoPlayer', {
+var player = videojs('my-video', {
   autoplay: true,   // autoplay enabled
   muted: true,      // start muted (required for autoplay in most browsers)
   controls: true,
