@@ -1,8 +1,8 @@
 /*
  * Version: 1.0.1
  * Template: chat bot ai
- * Author: true shine
- * Design and Developed by: true shine
+ * Author: Creatiix Design
+ * Design and Developed by: Creatiix Design
  * NOTE: This file contains the script for initialize & listener Template.
  */
 /*----------------------------------------------
@@ -59,9 +59,14 @@ Index Of Script
         slidesToShow: 3,
         slidesToScroll: 1,
         centerMode: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
         centerPadding: "100px",
-        dots: false,
+        dots: true,
         arrows: false,
+        prevArrow: '<button type="button" class="slick-prev"><i class="ph ph-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="ph ph-chevron-right"></i></button>',
         responsive: [
           { breakpoint: 1199, settings: { slidesToShow: 3, centerMode: true, centerPadding: "0px" } },
           { breakpoint: 1023, settings: { slidesToShow: 3, centerMode: true, centerPadding: "0px" } },
@@ -135,16 +140,16 @@ $(function () {
   if ($reviews.length && $reviews.children().length > 0 && !$reviews.hasClass("slick-initialized")) {
     $reviews.slick({
       slidesToShow: 3,
-      infinite: false,
+      infinite: true,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
-      dots: false,
+      dots: true,
       arrows: false,
+      prevArrow: '<button type="button" class="slick-prev"><i class="ph ph-chevron-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="ph ph-chevron-right"></i></button>',
       responsive: [
-        { breakpoint: 1024, settings: { slidesToShow: 2 } },
-        { breakpoint: 768, settings: { slidesToShow: 1 } },
-        { breakpoint: 480, settings: { slidesToShow: 1 } },
+        { breakpoint: 1024, settings: { slidesToShow: 1 } },
       ],
     });
   }
