@@ -1,0 +1,56 @@
+.how-work-card {
+    gap: 2rem 5rem;
+    margin-bottom: 4rem;
+
+    .step-number {
+        font-size: 3.75rem;
+    }
+
+    .how-work-icon {
+        font-size: 1.5rem;
+        color: var(--bs-white);
+        line-height: 2;
+    }
+
+    .how-work-img {
+        aspect-ratio: 3 / 1.69;
+        object-position: top;
+        object-fit: cover;
+        transform: scale(1);
+        overflow: hidden;
+        border-radius: 12px;
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.object-top {
+    top: -1rem;
+    right: 1rem;
+}
+
+.object-bottom {
+    bottom: -1rem;
+    left: 1rem;
+}
+
+@include media-breakpoint-down(lg) {
+    .how-work-card {
+        gap: 2rem 2.5rem;
+        margin-bottom: 2rem;
+
+        .step-number {
+            font-size: 1.875rem;
+        }
+
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .step-number {
+        font-size: 1em;
+    }
+}

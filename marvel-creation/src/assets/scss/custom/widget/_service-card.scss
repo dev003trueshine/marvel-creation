@@ -1,0 +1,20 @@
+.service-card {
+    border-radius: .75rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-.5rem);
+            .service-icon { 
+                transform: scale(1.1);
+            }
+    }
+    .service-icon {
+        line-height: 3.88rem;
+        font-size: 2rem;
+        border-radius: .75rem;
+        transition: all .3s ease-in-out;
+        i {
+            color: var(--bs-white);
+        }
+    }
+}

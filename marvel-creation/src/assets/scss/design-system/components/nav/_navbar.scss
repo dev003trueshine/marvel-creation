@@ -1,0 +1,140 @@
+
+.header-link {
+  color: var(--bs-heading-color);
+  /* hidden line initially */
+  .hover-line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--bs-primary);
+    transition: width 0.5s ease;
+  }
+
+  /* animate on hover */
+  &:hover {
+    .hover-line {
+      width: 100%;
+    }
+
+  }
+
+  &.active {
+    color: var(--bs-primary);
+  }
+}
+
+.mango-navbar {
+  .logo-default {
+    max-height: 40px;
+  }
+}
+
+@include media-breakpoint-down(xl) {
+
+  .mango-navbar {
+    .navbar-collapse {
+      &:not(.offcanvas-collapse) {
+        position: absolute;
+        top: 96%;
+        left: 0;
+        width: 100%;
+        flex-grow: unset;
+        background: var(--bs-body-bg);
+        z-index: 1081;
+        box-shadow: $box-shadow-sm;
+        -webkit-transition: all 150ms ease !important;
+        transition: all 150ms ease;
+
+        .navbar-nav {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .mango-navbar {
+    .navbar-collapse {
+      &:not(.offcanvas-collapse) {
+        top: 100%;
+      }
+    }
+  }
+
+}
+
+// header
+.navbar,
+.header-default {
+  position: relative;
+  z-index: 1070;
+  /* Keep navbar above slick-banner */
+}
+
+@media (max-width: 1199px) {
+  .mango-navbar {
+    z-index: 889;
+  }
+
+}
+
+header {
+  .navbar {
+    ul {
+      li {
+        i {
+          display: inline-block;
+          font-weight: 700;
+          font-size: 1em;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+  }
+
+  .navbar-right {
+    &.menu-right {
+      ul {
+        li {
+          margin-right: 2.3em;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+
+  header {
+    .navbar {
+      ul {
+        li {
+          a {
+            &:hover {
+              background-image: linear-gradient(to right,
+                  var(--bs-primary) 0%,
+                  var(--bs-gray-600) 100%,
+                  var(--bs-gray-600) 50%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-clip: text; // for Firefox
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .navbar-brand img.logo {
+    height: 50px;
+  }
+}

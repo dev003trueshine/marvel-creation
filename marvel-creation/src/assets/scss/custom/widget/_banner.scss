@@ -1,0 +1,66 @@
+.banner-container {
+
+    .banner-content {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+        }
+    }
+
+    &.general-slider {
+        .slick-dots {
+            position: absolute;
+            bottom: 50px;
+            left: 0;
+            right: 0;
+            transform: translateX(-50px);
+            gap: 24px;
+        }
+        .slick-dots li button:before {
+            background-color: rgba(var(--bs-white-rgb), 0.5);
+        }
+
+        .slick-dots li button:hover:before {
+            background-color: var(--bs-warning);
+        }
+
+        .slick-dots li.slick-active button:before {
+            width: 32px;
+            height: 12px;
+            border-radius: 8px;
+            background-color: var(--bs-warning);
+        }
+
+    }
+}
+.general-slider {
+    .slick-dots {
+        position: absolute;
+        bottom: 35px;
+        left: 0;
+        right: 0;
+        transform: translateX(-50px);
+        gap: 24px;
+    }
+
+    .slick-dots li button:before {
+        background-color: rgba(var(--bs-primary-rgb), 0.5);
+    }
+
+    .slick-dots li button:hover:before {
+        background-color: var(--bs-primary);
+    }
+
+    .slick-dots li.slick-active button:before {
+        width: 32px;
+        height: 12px;
+        border-radius: 8px;
+        background-color: var(--bs-primary);
+    }
+}
