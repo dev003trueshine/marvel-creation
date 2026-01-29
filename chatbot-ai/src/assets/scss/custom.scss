@@ -1,0 +1,33 @@
+/*!
+* Version: 1.0.0
+* Template: Rishit Fruits
+* Author: creatiixdesign
+* Design and Developed by: creatiixdesign
+* NOTE: This file contains the styling for Template.
+*
+*/
+
+// scss-docs-start import-stack
+// Configuration
+@import "./bootstrap/functions";
+
+// variable
+@import "./design-system/variables";
+@import "./design-system/variables-dark";
+@import "./bootstrap/variables";
+@import "./bootstrap/variables-dark";
+@import "./bootstrap/maps";
+@import "./bootstrap/mixins";
+@import "./bootstrap/utilities";
+
+// Custom Mixin And Helper
+@import "./design-system/helper/mixins";
+@import "./design-system/helper/reboot";
+@import "./design-system/helper/root";
+@import "./design-system/helper/utilities";
+
+
+// Plugin
+@import "./custom/globle";
+@import "./custom/widget";
+@import "./custom/custom-class";
