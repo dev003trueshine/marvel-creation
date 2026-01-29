@@ -1,0 +1,113 @@
+.review-card {
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+  border: 1px solid #1f293700;
+
+  .quotes-icon {
+    position: absolute;
+    top: 1rem;
+    left: auto;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: var(--bs-info-bg-subtle);
+  }
+}
+
+// brand 
+.client-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid #1f293700;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+  border-radius: .5rem;
+  background-color: var(--bs-warning-bg-subtle);
+  transition: all .3s ease-in-out;
+
+  &:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    transform: translateY(-5px);
+  }
+
+  .brand-img {
+    max-width: 120px;
+    max-height: 40px;
+    object-fit: contain;
+    transition: all .3s ease-in-out;
+
+  }
+}
+
+// slick slider
+.slick-dots {
+  display: flex !important;
+  justify-content: center;
+  padding: 12px 0 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 6px;
+    vertical-align: middle;
+
+    button {
+      background: transparent;
+      border: 0;
+      padding: 6px;
+      cursor: pointer;
+      outline: none;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--bs-gray-300);
+        transition: transform 0.22s ease, background-color 0.22s ease, opacity 0.22s ease;
+        opacity: 1;
+      }
+
+      &:hover:before,
+      &:focus:before {
+        transform: scale(1.15);
+        background-image: linear-gradient(to right,
+            var(--bs-primary) 0%,
+            var(--bs-gray-600) 100%,
+            var(--bs-gray-600) 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text; // for Firefox;
+      }
+    }
+
+    &.slick-active {
+      button:before {
+        background: var(--bs-primary);
+        transform: scale(1.25);
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+@include media-breakpoint-down(md) {
+  .client-brand {
+    padding: .8rem;
+  }
+}
+
+// Small screen adjustments for slick dots only
+@media (max-width: 480px) {
+  .slick-dots {
+    padding-top: 8px;
+
+    li button:before {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}

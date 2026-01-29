@@ -1,0 +1,33 @@
+footer {
+    .footer-links {
+        .footer-links-item {
+            a {
+                color: var(--bs-white);
+                transition: all 0.3s ease-in-out;
+
+               .move-on-hover {
+                    color: var(--bs-white);
+                    transition: transform 0.3s ease-in-out;                
+                }
+            }
+
+            &:hover {
+                a {
+                    color: var(--bs-warning);
+                    .move-on-hover {
+                        transform: translateX(0.25rem);
+                         color: var(--bs-warning);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-links {
+        color: var(--bs-white);
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            color: var(--bs-warning);
+        }
+    }
+}
